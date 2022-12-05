@@ -15,6 +15,7 @@ const age = prompt('Age?');
 // Chiedo all'utente la quantità dei chiolometri che vuole percorrere
 const distance = prompt('Quanti chilometri vuole percorrere?');
 
+// Dati
 const ticket = 0.21
 
 const a = age
@@ -22,7 +23,7 @@ const x = distance
 
 let amount = distance * ticket
 
-
+// Operazioni
 if (a >= 21){
     message = 'maggiorenne';
     if (a >= 65){
@@ -41,10 +42,9 @@ if (a >= 21){
 console.log(message)
 
 
+// Colleziono i dati e li inserisco nella risposta
 placeholder.innerText = (message);
 
 
 
 
-/* Colleziono i dati e li inserisco nella risposta
-placeholder.innerText = ; */
