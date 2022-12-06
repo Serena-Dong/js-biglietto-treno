@@ -23,15 +23,15 @@ const a = age
 const x = distance 
 
 let price = distance * ticket
-const minorDiscount = price - 20 / 100
-const overDiscount = price - 40 / 100
+const minorDiscount = (price * 20) / 100
+const overDiscount = (price * 40) / 100
 
 // Operazioni
 if (a >= 21){
     message = 'maggiorenne';
     if (a >= 65){
         message = 'over';
-        tot = ( price - ( overDiscount));
+        tot = ( price - overDiscount);
         document.getElementById("initial-amount").innerHTML ="Prezzo Iniziale: €", price;
         document.getElementById("discount-amount").innerHTML = "Sconto Applicato: €", overDiscount.toFixed(2);
 
@@ -41,8 +41,8 @@ if (a >= 21){
     }
 } else {
     message = 'minorenne';
-    tot = ( price - ( price * minorDiscount));
-    document.getElementById("initial-amount").innerHTML = price;
+    tot = ( price - minorDiscount);
+    document.getElementById("initial-amount").innerHTML =  price;
 
 }
 
