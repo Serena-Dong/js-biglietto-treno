@@ -1,9 +1,7 @@
 /* 
-
 1-questions
 2-operations
 3-result
-
 */
 
 // Preparo l'elemento che deve essere riempito
@@ -32,8 +30,8 @@ if (a >= 21){
     if (a >= 65){
         message = 'over';
         tot = ( price - overDiscount);
-        document.getElementById("initial-amount").innerHTML ="Prezzo Iniziale: €", price;
-        document.getElementById("discount-amount").innerHTML = "Sconto Applicato: €", overDiscount.toFixed(2);
+        document.getElementById("initial-amount").innerHTML =`<p>Prezzo Iniziale: € ${price}</p>`;
+        document.getElementById("discount-amount").innerHTML = `<p>Sconto Applicato: € ${overDiscount.toFixed(2)}</p>`;
 
     } else {
         message = 'under';
@@ -42,7 +40,8 @@ if (a >= 21){
 } else {
     message = 'minorenne';
     tot = ( price - minorDiscount);
-    document.getElementById("initial-amount").innerHTML =  price;
+    document.getElementById("initial-amount").innerHTML =`<p>Prezzo Iniziale: € ${price}</p>`;
+    document.getElementById("discount-amount").innerHTML = `<p>Sconto Applicato: € ${minorDiscount.toFixed(2)}</p>`;
 
 }
 
@@ -50,12 +49,3 @@ console.log(message)
 
 // Colleziono i dati e li inserisco nella risposta
 placeholder.innerText = (tot.toFixed(2));
-
-
-
-
-
-
-
-
-
